@@ -56,8 +56,9 @@ export default {
                     project,
                     done: false,
                 });
+                this.titleText = "";
                 this.newTodoText = "";
-
+                this.projectText = "";
                 console.log("Emitting the data success !");
 
             }
