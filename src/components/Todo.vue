@@ -9,8 +9,8 @@
 
             </div>
             <div class="extra content">
-                <span class='right floated edit icon'>
-                    <i class='edit icon'></i>
+                <span class='right floated edit icon' v-on:click="showForm">
+                    <i class='edit icon' ></i>
                 </span>
             </div>
         </div>
@@ -42,5 +42,20 @@
 <script>
 export default {
     props: ['todo'],
+    data(){
+        return {
+            isEditing: false,
+        }
+    },
+    methods: {
+        showForm() {
+            this.isEditing = true;
+        },
+        hideForm(){
+            this.isEditing = false;
+        }
+
+    }
+
 }
 </script>
