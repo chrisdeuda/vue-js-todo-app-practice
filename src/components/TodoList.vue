@@ -3,33 +3,22 @@
         <!-- Javascript excpressions in Vue are enclose in double curly brackets -->
         <p>Completed Tasks {{ todos.filter( todo => {return todo.done === true}).length }}</p>
         <p>Pending Tasks: {{ todos.filter( todo => {return todo.done === false}).length }}</p>
-        <div class='ui centered card' v-for="todo in todos"  v-bind:key="todo">
-            <div class="content">
-                <div class="header">
-                    {{ todo.title}}
-                </div>
-                <div class="meta">
-                    {{ todo.project}}
+        <!-- Passing the Data to the component -->
+        <todo v-for="todo in todos"  v-bind:todo="todo" v-bind:key="todo"> </todo>
 
-                </div>
-                <div class="extra content">
-                    <span class='right floated edit icon'>
-                        <i class='edit icon'></i>
-                    </span>
-                </div>
-            </div>
-            <div class="ui bottom attached green basic button">
-                Completed
-            </div>
-            <div class="ui bottom attached red basic button" >
-                Complete
-            </div>
-        </div>
+      
     </div>
 </template>
 <script>
+
+import Todo from "./Todo";
+
+
 export default {
     props: ['todos'],
+    components: {
+        Todo,
+    }
 }
 </script>
 <style>
