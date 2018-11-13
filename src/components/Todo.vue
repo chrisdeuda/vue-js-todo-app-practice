@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="ui bottom attached green basic button">
+        <div class="ui bottom attached green basic button" v-on:click="completeTodo">
             Completed
         </div>
         <div class="ui bottom attached red basic button" >
@@ -64,8 +64,10 @@ export default {
          */
         deleteTodo(todo){
             this.$emit('delete-todo',todo);
+        },
+        completeTodo(todo){
+            this.$emit("complete-todo",todo);
         }
-
     }
 
 }

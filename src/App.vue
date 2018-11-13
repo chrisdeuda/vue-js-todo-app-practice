@@ -52,7 +52,7 @@ export default {
         done: todo.done,
       });
       console.log('Added New Todo Success');
-    }
+    },
   }
 }
 </script>
