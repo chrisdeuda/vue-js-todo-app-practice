@@ -1,5 +1,5 @@
 <template>
-    <div class='ui centered card'   v-bind:key="todo">
+    <div class='ui centered card'   v-bind:key="todo" v-show="!todo.done">
         <div class="content">
             <div class="header">
                 {{ todo.title}}
