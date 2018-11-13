@@ -45,12 +45,13 @@ export default {
 
   },
   methods: {
-    addTodo(title){
-      this.todos.push({
-        title,
-        done:false,
+    addTodo(todo){
+      this.todos.push( {
+        title: todo.title,
+        project: todo.project,
+        done: todo.done,
       });
-
+      console.log('Added New Todo Success');
     }
   }
 }
