@@ -10,7 +10,7 @@ export default new Router({
     {
       path: "/",
       name: "TodoList",
-      component: HelloWorld,
+      component: TodoList,
     },
   ],
 });
