@@ -12,6 +12,9 @@
                 <span class='right floated edit icon' v-on:click="showForm">
                     <i class='edit icon' ></i>
                 </span>
+                <span class='right floated trash icon' v-on:click="deleteTodo(todo)">
+                    <i class="trash icon"></i>
+                </span>
             </div>
         </div>
          <!-- Form is visible when we are in editing mode -->
@@ -55,6 +58,12 @@ export default {
         },
         hideForm(){
             this.isEditing = false;
+        },
+        /**
+         * @method - It will trigger the main Todo List app aka Parent Component TodoList
+         */
+        deleteTodo(todo){
+            this.$emit('delete-todo',todo);
         }
 
     }
