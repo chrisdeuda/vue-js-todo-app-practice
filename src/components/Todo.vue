@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="ui bottom attached green basic button" v-on:click="completeTodo">
+        <div class="ui bottom attached green basic button" v-on:click="completeTodo(todo)">
             Completed
         </div>
         <div class="ui bottom attached red basic button" >

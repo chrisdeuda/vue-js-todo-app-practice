@@ -32,6 +32,7 @@ export default {
             console.log("Try deleting the " + todoIndex);
         },
         completeTodo(todo){
+            const todoIndex = this.todos.indexOf(todo);
             console.log("Deleting Success" + this.todos[todoIndex] );
             this.todos[todoIndex].done = true;
         }
