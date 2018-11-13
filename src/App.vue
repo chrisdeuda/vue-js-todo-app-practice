@@ -43,6 +43,15 @@ export default {
 
     }
 
+  },
+  methods: {
+    addTodo(title){
+      this.todos.push({
+        title,
+        done:false,
+      });
+
+    }
   }
 }
 </script>
