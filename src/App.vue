@@ -4,17 +4,21 @@
   <div id="app">
     <!-- <router-view/> -->
     <todo-list v-bind:todos="todos"></todo-list>
+    <create-todo v-on:add-todo="addTodo"></create-todo>
+
   </div>
 </template>
 
 <script>
 
 import TodoList from "@/components/TodoList";
+import CreateTodo from "@/components/CreateTodo";
 
 export default {
   name: 'App',
   components: {
-    TodoList
+    TodoList,
+    CreateTodo,
   },
 
   data () {
